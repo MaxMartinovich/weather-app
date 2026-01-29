@@ -17,12 +17,12 @@ async function clickButtonLupa() {
   }
 
   let json = await enderecoServidor.json();
-  console.log(json);
   boxPesquisa.innerHTML = `
             <h1 class ="cidade">Cidade: ${json.name}</h1>
             <p class ="temperatura">Temperatura: ${Math.floor(json.main.temp)} °C</p>
             <p class ="temperaturaMinima">Temperatura minima: ${Math.floor(json.main.temp_min)} °C</p>
             <p class ="umidade">Umidade: ${json.main.humidity}% </p>
+            <p class ="umidade">Sensação térmica: ${Math.floor(json.main.feels_like)} °C </p>
             <img class = "iconeBox" src = "https://openweathermap.org/img/wn/${json.weather[0].icon}.png">
   `;
   //Apagar o input que já estava lá
