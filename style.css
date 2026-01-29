@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.box-container {
+}
+.botao {
+  width: 50px;
+}
