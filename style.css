@@ -58,3 +58,34 @@ body {
   max-height: 100%;
   object-fit: contain;
 }
+
+.box-pesquisa {
+  margin-top: 20px;
+}
+.cidade {
+  color: #f4f3f2;
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+.temperatura {
+  color: #f4f3f2;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.temperaturaMinima {
+  color: #f4f3f2;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.umidade {
+  color: #f4f3f2;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.iconeBox {
+  margin-top: 10px;
+}
