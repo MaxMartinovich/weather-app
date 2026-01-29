@@ -1,4 +1,4 @@
-async function clickButton() {
+async function clickButtonLupa() {
   let chaveAPI = "cfecc626caba42e3ffbae33f551d91b8";
   let cidade = document.querySelector(".input-cidade").value;
   let boxPesquisa = document.querySelector(".box-pesquisa");
@@ -26,4 +26,16 @@ async function clickButton() {
             <p class ="umidade">Umidade: ${json.main.humidity}% </p>
             <img class = "iconeBox" src = "https://openweathermap.org/img/wn/${json.weather[0].icon}.png">
   `;
+}
+
+function clickButtonMicrofone() {
+  let speechRecognition = new window.webkitSpeechRecognition();
+  speechRecognition.lang = "pt-BR";
+  speechRecognition.start();
+
+  speechRecognition.onresult = function (evento) {
+    let vozParaTexto = evento.results[0][0].transcript;
+    document.querySelector(".input-cidade").value = vozParaTexto;
+    clickButtonLupa();
+  };
 }
