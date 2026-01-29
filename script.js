@@ -18,7 +18,6 @@ async function clickButtonLupa() {
 
   let json = await enderecoServidor.json();
   console.log(json);
-
   boxPesquisa.innerHTML = `
             <h1 class ="cidade">Cidade: ${json.name}</h1>
             <p class ="temperatura">Temperatura: ${Math.floor(json.main.temp)} °C</p>
@@ -26,7 +25,16 @@ async function clickButtonLupa() {
             <p class ="umidade">Umidade: ${json.main.humidity}% </p>
             <img class = "iconeBox" src = "https://openweathermap.org/img/wn/${json.weather[0].icon}.png">
   `;
+  //Apagar o input que já estava lá
+  document.querySelector(".input-cidade").value = "";
 }
+//Faz com que apertar o ENTER também sirva no lugar de clicar na lupa
+const inputCidade = document.querySelector(".input-cidade");
+inputCidade.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    clickButtonLupa();
+  }
+});
 
 function clickButtonMicrofone() {
   let speechRecognition = new window.webkitSpeechRecognition();
@@ -39,3 +47,14 @@ function clickButtonMicrofone() {
     clickButtonLupa();
   };
 }
+const icon = document.querySelector("#icon-theme");
+const botaoTema = document.querySelector("#toggle-theme");
+botaoTema.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    icon.src = "img/sun-svgrepo-com.svg";
+  } else {
+    icon.src = "img/night-svgrepo-com.svg";
+  }
+});

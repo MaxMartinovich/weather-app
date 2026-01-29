@@ -19,8 +19,12 @@ body {
   min-height: 100vh;
   background-color: #f4f3f2;
 }
+
+#icon-theme {
+  width: 50px;
+}
 .box-container {
-  background-color: black;
+  background-color: #121212;
   width: 500px;
   padding: 30px;
   border-radius: 30px;
@@ -31,9 +35,10 @@ body {
 }
 .botao-header {
   font-size: 20px;
-  background: #f4f3f2;
+  color: #f4f3f2;
   cursor: pointer;
   border-radius: 40px;
+  background-color: #f4f3f2;
 }
 .botao-header:hover {
   background-color: #aaa9a9;
@@ -88,4 +93,24 @@ body {
 
 .iconeBox {
   margin-top: 10px;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #121212;
+}
+
+body.dark .box-container {
+  background-color: #a9cddd;
+  color: #121212;
+}
+
+body.dark input,
+body.dark p,
+body.dark h1 {
+  color: #121212;
+}
+
+body.dark .botao-header {
+  background-color: rgb(255, 245, 245);
 }
