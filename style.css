@@ -39,12 +39,12 @@ body {
   color: #f4f3f2;
   cursor: pointer;
   border-radius: 40px;
-  background-color: #575757;
+  background-color: #303030;
   border: none;
   padding: 10px;
 }
 .botao-header:hover {
-  background-color: #aaa9a9;
+  background-color: #181818;
   transform: scale(1.1);
 }
 .botao {
