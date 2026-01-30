@@ -28,6 +28,7 @@ body {
   width: 500px;
   padding: 30px;
   border-radius: 30px;
+  padding-top: 45px;
 }
 
 .input-cidade {
@@ -38,7 +39,9 @@ body {
   color: #f4f3f2;
   cursor: pointer;
   border-radius: 40px;
-  background-color: #f4f3f2;
+  background-color: #575757;
+  border: none;
+  padding: 10px;
 }
 .botao-header:hover {
   background-color: #aaa9a9;
@@ -51,6 +54,7 @@ body {
   background: #f4f3f2;
   cursor: pointer;
   border-radius: 40px;
+  border: none;
 }
 
 .botao:hover {
